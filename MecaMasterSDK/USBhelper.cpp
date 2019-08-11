@@ -5,7 +5,7 @@
 
 #define DEVICE_PID  0x0016 //Meca master PID
 #define DEVICE_VID  0x268A // Meca Master VID
-static hid_device* KBHandle = NULL;
+hid_device* KBHandle = NULL;
 
 
 bool USBhelper::findKeyboard() {
