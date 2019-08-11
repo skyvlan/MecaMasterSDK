@@ -2,7 +2,7 @@
 an attempt to create a Lighting SDK for dA Meca Master RGB through Reverse Engineering
 
 # NOTICE
-Current commit is just a bad attempt and proof of concept in C. it's far from Finished and will be rewritten in C++. in short: Bad code intended.
+Current commit is just a bad attempt and proof of concept in C written in under 3 minutes. it's far from Finished and will be rewritten in C++. in short: Bad code intended. I'm currently rewriting everything from scratch.
 
 # TODO
 0. Actually work on this thing without procrastinating every 5 minutes
