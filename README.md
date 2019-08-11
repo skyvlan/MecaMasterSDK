@@ -8,7 +8,7 @@ Current commit is just a bad attempt and proof of concept in C written in under 
 0. Actually work on this thing without procrastinating every 5 minutes
 1. Do Total rewrite in C++ (current one is written in C)
 2. Finish Features
-3. do initial commit
+3. do initial commit of rewrite 
 4. Add wiki(?)  
 5. Linux and Mac support
 
