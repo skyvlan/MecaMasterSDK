@@ -2,7 +2,7 @@
 an attempt to create a Lighting SDK for dA Meca Master RGB through Reverse Engineering
 
 # NOTICE
-very experimental, not guaranteed to be working
+Current commit is just a bad attempt and proof of concept in C written in under 3 minutes. it's far from Finished and will be rewritten in C++. in short: Bad code intended. I'm currently rewriting everything from scratch.
 
 # TODO
 0. ~~Actually work on this thing without procrastinating every 5 minutes~~
@@ -12,3 +12,33 @@ very experimental, not guaranteed to be working
 4. Add wiki(?)  
 5. Linux and Mac support
 6. Tidy up things
+
+# Example
+```
+// Set the color of the device withrandom colors
+#include "pch.h"
+#include <iostream>
+#include <random>
+#include <Windows.h>
+#include "KeyboardSDK.h"
+
+int main(){
+	std::random_device R;
+	std::random_device G;
+	std::random_device B;
+	std::uniform_int_distribution<int> uf(0, 255);
+	KeyboardSDK Keyboard;
+	if (!Keyboard.FindKeyboard()) {
+		std::cout << "Cannot Find Keyboard" << std::endl;
+	}
+	else {
+		std::cout << "Keyboard Found!" << std::endl;
+		while (true) {
+
+			std::cout << "Color changed to: " << std::hex << "#" << uf(R) << uf(G) << uf(B) << std::endl;
+			Keyboard.SetColorAllKeys(uf(R), uf(G), uf(B));
+			Sleep(1000);
+		}
+	}
+}
+```
